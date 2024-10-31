@@ -9,8 +9,12 @@ public class email {
 	
 	private int mailBoxCap;
 	private String alterEmail;
-}
+
 
 	//Constructor to get first name and last name
-
+	public email(String fname, String lname){
+		String emailName = fname+"."+lname;
+	}
 	//Return
+	
+}
