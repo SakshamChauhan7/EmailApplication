@@ -17,4 +17,26 @@ public class email {
 	}
 	//Return
 	
+	public String depSelect(int opt) {
+		
+		// Configure sales as 1, development as 2, accounting as 3
+		// The check for the over bound value will be placed at actuall 
+		if( opt <= 3) {
+			if( opt == 1) {
+				return "Sales";
+			}
+			else if ( opt == 2) {
+				return "Development";
+			}
+			else if ( opt == 3) {
+				return "Accounting";
+			}	
+		}
+		else {
+			
+			return null;
+		}
+		
+	}
+	
 }
