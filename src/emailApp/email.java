@@ -1,4 +1,6 @@
 package emailApp;
+import static emailApp.myUtil.*;// For using my own util methods
+
 
 public class email {
 	
@@ -15,13 +17,25 @@ public class email {
 	public email(String fname, String lname){
 		String emailName = fname+"."+lname;
 	}
-	//Return
+
 	
 	public String depSelect(int opt) {
 		
-		// Configure sales as 1, development as 2, accounting as 3
-		// The check for the over bound value will be placed at actuall 
-		if( opt <= 3) {
+		
+		boolean exit = false;
+		
+		while(!exit) {
+			print("+++++++++++++++++++++++++++++");
+			print("Select the Department");
+			print("1: Sales");
+			print("2. Development");
+			print("3: Accounting");
+			print("4: None");
+			print("+++++++++++++++++++++++++++++");
+			print();
+			ask("You choose: ");
+			// Configure sales as 1, development as 2, accounting as 3
+			// The check for the over bound value will be placed at actuall 
 			if( opt == 1) {
 				return "Sales";
 			}
@@ -31,11 +45,12 @@ public class email {
 			else if ( opt == 3) {
 				return "Accounting";
 			}	
-		}
-		else {
 			
-			return null;
+			else {
+				print("Wrong input Try again");
+			}
 		}
+		return null;
 		
 	}
 	
