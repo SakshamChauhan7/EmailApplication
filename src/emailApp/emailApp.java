@@ -12,7 +12,7 @@ public class emailApp{
 	
 	public static void main(String args[]){
 	
-		
+		// Asking Name for email
 		ask("Enter First name: ");
 		String fname = input.nextLine();
 		
@@ -24,8 +24,11 @@ public class emailApp{
 		
 		//System.out.println(emailName.getEmailName());
 		
-		String Dep = emailName.depSelect();
+		//Choosing department
+		emailName.depSelect();
 		
-		print(Dep);
+		System.out.println(emailName.getEmailName());
+		
+		
 	}
 }

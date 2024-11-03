@@ -13,6 +13,9 @@ public class email {
 	private String firstname;
 	private String lastname;
 	private String userName = null; // firstName.LastName
+	private String email = null; // Final complete email
+	private String companyName = "Stech"; //preset company name
+	
 	
 	private String department = null;
 	private String password = null;
@@ -23,11 +26,17 @@ public class email {
 
 	//Constructor to get first name and last name
 	public email(String fname, String lname){
+		//for data purpose add first and last name
+		firstname = fname;
+		lastname = lname;
+		
+		
 		userName = fname+"."+lname;
 	}
 
 	public String getEmailName() {
-		return userName;
+		email = userName +"@"+ department + companyName + ".com";
+		return email;
 	}
 	
 	public String depSelect() {
@@ -51,16 +60,21 @@ public class email {
 			// Configure sales as 1, development as 2, accounting as 3
 			// The check for the over bound value will be placed at actuall 
 			if( opt == 1) {
-				return "Sales";
+				department = "Sales."; 
+				return department;
 			}
 			else if ( opt == 2) {
-				return "Development";
+				department = "Development."; 
+				return department;
+				
 			}
 			else if ( opt == 3) {
-				return "Accounting";
+				department = "Accounting.";
+				return department;
 			}	
 			else if ( opt == 4 ) {
-				return "";
+				department = "";
+				return department;
 			}
 			
 			else {
