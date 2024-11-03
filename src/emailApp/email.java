@@ -6,8 +6,9 @@ public class email {
 	
 	private String firstname;
 	private String lastname;
-	private String password;
-	private String department;
+	private String password = null;
+	private String department = null;
+	private String emailName = null;
 	
 	private int mailBoxCap;
 	private String alterEmail;
@@ -15,9 +16,12 @@ public class email {
 
 	//Constructor to get first name and last name
 	public email(String fname, String lname){
-		String emailName = fname+"."+lname;
+		emailName = fname+"."+lname;
 	}
 
+	public String getEmailName() {
+		return emailName;
+	}
 	
 	public String depSelect(int opt) {
 		

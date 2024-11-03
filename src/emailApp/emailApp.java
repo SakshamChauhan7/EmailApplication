@@ -19,6 +19,10 @@ public class emailApp{
 		ask("Enter Last name: ");
 		String lname = input.nextLine();
 		
+		//make a new object
+		email emailName = new email(fname,lname);
+		
+		System.out.println(emailName.getEmailName());
 		
 	}
 }
