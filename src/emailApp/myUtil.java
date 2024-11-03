@@ -1,5 +1,7 @@
 package emailApp;
 
+import java.util.Scanner;
+
 public class myUtil {
 
 	//Use "ask" when you print menu option so there is no new line for input
@@ -16,5 +18,7 @@ public class myUtil {
 		public static void print() {
 			System.out.println();
 		}
+		
+		
 		
 }

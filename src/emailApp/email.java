@@ -1,14 +1,21 @@
 package emailApp;
 import static emailApp.myUtil.*;// For using my own util methods
 
+import java.util.Scanner;
+
+
 
 public class email {
 	
+	//Scanner method
+	private static Scanner input = new Scanner(System.in);
+	
 	private String firstname;
 	private String lastname;
-	private String password = null;
+	private String userName = null; // firstName.LastName
+	
 	private String department = null;
-	private String emailName = null;
+	private String password = null;
 	
 	private int mailBoxCap;
 	private String alterEmail;
@@ -16,16 +23,16 @@ public class email {
 
 	//Constructor to get first name and last name
 	public email(String fname, String lname){
-		emailName = fname+"."+lname;
+		userName = fname+"."+lname;
 	}
 
 	public String getEmailName() {
-		return emailName;
+		return userName;
 	}
 	
-	public String depSelect(int opt) {
+	public String depSelect() {
 		
-		
+		int opt = 4;
 		boolean exit = false;
 		
 		while(!exit) {
@@ -38,6 +45,9 @@ public class email {
 			print("+++++++++++++++++++++++++++++");
 			print();
 			ask("You choose: ");
+			opt = input.nextInt();
+			input.nextLine(); // to remove space from buffer
+			
 			// Configure sales as 1, development as 2, accounting as 3
 			// The check for the over bound value will be placed at actuall 
 			if( opt == 1) {
@@ -49,6 +59,9 @@ public class email {
 			else if ( opt == 3) {
 				return "Accounting";
 			}	
+			else if ( opt == 4 ) {
+				return "";
+			}
 			
 			else {
 				print("Wrong input Try again");
