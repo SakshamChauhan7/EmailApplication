@@ -29,6 +29,9 @@ public class emailApp{
 		
 		System.out.println(emailName.getEmailName());
 		
+		emailName.generatePass(10);
+		System.out.println(emailName.getPassword());
+		
 		
 	}
 }

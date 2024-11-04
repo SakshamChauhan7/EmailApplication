@@ -10,8 +10,8 @@ public class email {
 	//Scanner method
 	private static Scanner input = new Scanner(System.in);
 	
-	private String firstname;
-	private String lastname;
+	private String firstname; // Just for data purpose
+	private String lastname; // Just for data purpose/
 	private String userName = null; // firstName.LastName
 	private String email = null; // Final complete email
 	private String companyName = "Stech"; //preset company name
@@ -34,10 +34,6 @@ public class email {
 		userName = fname+"."+lname;
 	}
 
-	public String getEmailName() {
-		email = userName +"@"+ department + companyName + ".com";
-		return email;
-	}
 	
 	public String depSelect() {
 		
@@ -85,4 +81,27 @@ public class email {
 		
 	}
 	
+	public void generatePass(int length) {
+		
+		String passSet = "ASDFGHJKLQWERTYUIOPZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890!@#^&*";
+		char [] pass = new char[length];
+		
+		for(int i = 0 ; i < length; i++) {
+			int rand = (int) (Math.random() * passSet.length());
+			
+			pass[i] = passSet.charAt(rand);
+			password = String.valueOf(pass);
+		}
+	}
+	
+	// All the get methods are here:
+	
+	public String getEmailName() {
+		email = userName +"@"+ department + companyName + ".com";
+		return email;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
 }
