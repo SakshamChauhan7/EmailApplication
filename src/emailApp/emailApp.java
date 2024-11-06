@@ -12,6 +12,8 @@ public class emailApp{
 	
 	public static void main(String args[]){
 	
+	//Step 1: Asking for Name
+		
 		// Asking Name for email
 		ask("Enter First name: ");
 		String fname = input.nextLine();
@@ -24,13 +26,15 @@ public class emailApp{
 		
 		//System.out.println(emailName.getEmailName());
 		
+	// Step 2: Selecting Department
 		//Choosing department
 		emailName.depSelect();
 		
-		System.out.println(emailName.getEmailName());
-		
+		//System.out.println(emailName.getEmailName());
+	
+	// Step 3: generating password
 		emailName.generatePass(10);
-		System.out.println(emailName.getPassword());
+		
 		
 		
 	}
